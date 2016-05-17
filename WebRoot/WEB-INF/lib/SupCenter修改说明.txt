@@ -1,0 +1,120 @@
+﻿每次更新中心端程序后，请打包，并更新版本号;
+进入classes目录下打包：jar -cvf SupCenter-1.x.jar cn/*
+
+26.SupCenter-1.42
+2011-6-22
+修正供应商单位查询中的Bug;
+
+25.SupCenter-1.41
+2011-6-21
+修正物资字典中获取最大编码错误；
+新增物资典中包装规格等相关属性；
+
+
+25.SupCenter-1.40
+2011-6-18
+物资字典中查询的方法进行优化;
+修正物资字典中checkMaterialCodeUnique中的bug; 
+增加供应商单位查询方法的参数值；
+
+24.SupCenter-1.39
+2011-6-17
+物资字典中商品名称修改为通用名称，并增加相关拼音简码、五笔简码；
+
+24.SupCenter-1.38
+2011-6-16
+物资字典中增加商品名称、拆零规格、单位、拆零系数；
+
+23.SupCenter-1.37
+2011-6-13
+修改物资字典的价格默认值为0；
+修改getPersonId中的空值；
+
+22.SupCenter-1.36
+2011-6-12
+修改物资字典的实现类；
+修改物资字典的价格默认值为0；
+
+
+21.SupCenter-1.35
+2011-6-7
+修改物资字典的实体类，新增批价发；
+CdMaterialDictDAO中增加方法：
+countByCondition(String condition);
+findByCondition(String condition, int start, int limits);
+
+20.SupCenter-1.34
+2011-5-21 
+修改物资字典的实体类
+baseToolImpl的findByInputCode增加入库出库类型判断；
+
+
+19.SupCenter-1.33
+2011-5-21 
+修改BaseToolImpl addConditions方法，增加对停用标志的控制
+CdUsedDiseaseDictDAO中的upadte方法
+
+
+1.SupCenter-1.01
+增加血库中心端
+
+2.SupCenter-1.02
+增加物资库中心端
+
+3.SupCenter-1.03
+修改保存供应商授权物资方法bug,已授权的物资不会重复授权。
+
+4.SupCenter-1.04
+诊疗项目字典DAO增加了根据项目类别，编码，规格和单位查询项目价格方法：
+Double findPrice(String fstrClass,String fstrCode,String fstrSpec,String fstrUnits);
+
+物资领用卡字典增加更新帐户余额方法
+public CdMaterialCard updateCredit(String unitsCode,String cardCode,Double payout)
+
+5.SupCenter-1.05
+用户登录增加用户对照的人员所授权的科室设置
+
+6.SupCenter-1.06
+cn.superion.dataDict.entity.CvBloodTypeDict增加属性bloodCompareSign:String
+
+7.SupCenter-1.07
+修改查询用户列表bug,改为只能查询有应用程序菜单授权的用户
+修改查询角色授权菜单树bug,改为除了中心端应用程序能查询所有的菜单外，其他应用程序只能查询本应用程序下的菜单
+科室领用卡字典增加根据科室编码查询领用卡列表方法
+
+8.SupCenter-1.09
+2011-3-26
+修改了药品字典和诊疗字典
+
+9.SupCenter-1.10
+2011-4-8
+修改了药品字典和诊疗字典
+新增了病案首页、会计科目、临床分类字典
+
+
+10.SupCenter-1.11
+2011-4-8 去掉打印等配置相关文件
+
+11.SupCenter-1.12
+2011-4-14 修改诊疗字典的配置文件、药品套餐类的保存方法
+
+12.SupCenter-1.13
+2011-4-21 修改套餐主记录保存问题
+
+13.SupCenter-1.21
+2011-4-21 修改套餐保存方法 DrugGroupImpl 方法saveGroupMaster
+
+14.SupCenter-1.24
+2011-4-24 修改药品套餐未传输模块标志时，当门诊使用；
+
+15.SupCenter-1.25
+2011-4-25 修改药品套餐编码生成器为序列；
+
+16.SupCenter-1.26
+2011-4-26 修改药品字典的检索方法
+
+17.SupCenter-1.27
+2011-4-29 修改药品套餐字典的检索方法
+
+18.SupCenter-1.32
+2011-5-2 增加读取程序版本；

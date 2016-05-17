@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="SupMaterial"
+  id="myeclipse.1292465538269"
+  context-root="/SupMaterial"
+  j2ee-spec="5.0"
+  archive="SupMaterial.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
