@@ -218,10 +218,10 @@ public class MaterialProvideMasterDAO extends BaseHibernateDAO  {
     
     public List findGroupByDept(String unitsCode,String supplyNo) {
 		StringBuilder hql = new StringBuilder();
-		hql.append(" select new map(a.deptCode as deptCode,b.materialClass as materialClass,b.materialCode as materialCode,b.materialName as materialName,b.materialSpec as materialSpec,b.materialUnits as materialUnits,b.tradePrice as tradePrice,sum (b.sendAmount) as sendAmount,sum (b.amount) as amount,sum(b.sendAmount * b.tradePrice) as tradeMoney )" +
+		hql.append(" select new map(a.deptCode as deptCode,b.materialClass as materialClass,b.materialCode as materialCode,b.materialId as materialId,b.materialName as materialName,b.materialSpec as materialSpec,b.materialUnits as materialUnits,b.tradePrice as tradePrice,sum (b.sendAmount) as sendAmount,sum (b.amount) as amount,sum(b.sendAmount * b.tradePrice) as tradeMoney )" +
 				" from MaterialProvideMaster a,MaterialProvideDetail b  " +
 				" where a.unitsCode='"+unitsCode+"' and a.autoId = b.mainAutoId and b.mainProvider is not null and b.supplyNo ='"+supplyNo+"'");
-		hql.append("  group by a.deptCode,b.materialClass, b.materialCode,b.materialName,b.materialSpec,b.materialUnits,b.tradePrice order by a.deptCode ");		
+		hql.append("  group by a.deptCode,b.materialClass, b.materialCode,b.materialId,b.materialName,b.materialSpec,b.materialUnits,b.tradePrice order by a.deptCode ");		
 		return  getSession().createQuery(hql.toString()).list();
 	}
     

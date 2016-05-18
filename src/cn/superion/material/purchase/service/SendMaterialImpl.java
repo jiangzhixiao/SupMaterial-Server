@@ -641,6 +641,7 @@ public class SendMaterialImpl implements ISendMaterial {
 					for (Map<String,Object> detail : details) {
 						String materialName = (String) detail.get("materialName");
 						String materialCode = (String) detail.get("materialCode");
+						String materialId = (String) detail.get("materialId");
 						String materialUnits = (String) detail.get("materialUnits");
 						String materialSpec = (String) detail.get("materialSpec");
 						String materialClass = (String) detail.get("materialClass");
@@ -653,6 +654,7 @@ public class SendMaterialImpl implements ISendMaterial {
 						item.setMaterialCode(materialCode);
 						item.setMaterialName(materialName);
 						item.setMaterialSpec(materialSpec);
+						item.setMaterialId(materialId);
 						item.setMaterialUnits(materialUnits);
 						item.setSendAmount(sendAmount);
 						item.setTradeMoney(tradeMoney);
