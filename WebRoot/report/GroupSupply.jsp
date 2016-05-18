@@ -76,12 +76,12 @@ td {
  <center><label class="td_column_header">后勤供应物资汇总表</label> </center>
 <table border="1px" bordercolor="#000000" style="font-size: 12px;border-collapse: collapse;">
  <tr height="30">
-    <td colspan="5"  class="td_column_header">供货单位:${printData.providerName}</td>
-    <td colspan="2"  class="td_column_header">单据编号:${printData.billNo}</td>
+    <td colspan="4"  class="td_column_header">供货单位:${printData.providerName}</td>
+    <td colspan="3"  class="td_left">单据编号:${printData.billNo}</td>
   </tr>
   <tr height="30">
-      <td colspan="2"  class="td_column_header">领用部门:${printData.deptName}</td>
-    <td colspan="7"  class="td_right">打印日期:${printData.printDate}</td>
+    <td colspan="2"  class="td_column_header">领用部门:${printData.deptName}</td>
+    <td colspan="5"  class="td_column_header">打印日期:${printData.printDate}</td>
   </tr>
   <tr height="30">
     <td width="70" class="td_column_header">物资编码</td>
@@ -107,10 +107,10 @@ td {
   </c:forEach>
   
   <tr>
-    <td colspan="1" class="td_column_header"><p>合计(大写):</p></td>
-    <td colspan="3" class="td_column_header" id="td_total"></td>
-	<td colspan="1" class="td_column_header"><p>￥：</p></td>
-    <td colspan="2" class="td_column_header">${printData.totalCharges}</td>
+    <td colspan="1" class="td_column_header">合计(大写):</td>
+    <td colspan="3" class="td_right" id="td_total" ></td>
+	<td colspan="1" class="td_column_header">￥：</td>
+    <td colspan="2" class="td_right">${printData.totalCharges}</td>
 	
 	
   </tr>
