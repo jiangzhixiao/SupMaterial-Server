@@ -1,4 +1,4 @@
-﻿var LODOP; // 声明为全局变量
+﻿var LODOP; // 声明为全局变量a
 var contextPath = "SupMaterial";
 var hst = window.location.host;
 function PreviewOrExp(map) {
